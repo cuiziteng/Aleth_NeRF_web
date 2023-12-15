@@ -162,6 +162,11 @@
 					</td>
 					<td align=center width=110px>
 						<center>
+							<span style="font-size:18px"><a href="https://maxianzheng.github.io/">Xianzheng Ma<sup>4</sup></a></span>
+						</center>
+					</td>
+					<td align=center width=110px>
+						<center>
 							<span style="font-size:18px"><a href="http://mmlab.siat.ac.cn/yuqiao/">Yu Qiao<sup>2</sup></a></span>
 						</center>
 					</td>
@@ -189,13 +194,18 @@
 							<span style="font-size:14px"><a>3. RIKEN AIP</a></span><br>
 						</center>
 					</td>
+					<td align=center width=100px>
+						<center>
+							<span style="font-size:14px"><a>4. University of Oxford</a></span><br>
+						</center>
+					</td>
 				</tr>
 			</table>
 			<table align=center width=600px>
 				<tr>
 					<td align=center width=170px>
 						<center>
-							<span style="font-size:18px"><a href='https://arxiv.org/abs/2303.05807'>[Paper]</a></span>
+							<span style="font-size:18px"><a href='https://arxiv.org/abs/2312.09093'>[Paper]</a></span>
 						</center>
 					</td>
 					<td align=center width=170px>
@@ -231,15 +241,15 @@
 		<center><h1>Abstract</h1></center>
 		<tr>
 			<td>
-				Common capture low-light scenes are challenging for most computer vision techniques, including Neural Radiance Fields (NeRF). Vanilla NeRF is 
-				viewer-centred that simplifies the rendering process only as light emission from 3D locations in the viewing direction, thus failing to model 
-				the low-illumination induced darkness.  Inspired by emission theory of ancient Greek that visual perception is accomplished by rays casting from eyes, 
-				we make slight modifications on vanilla NeRF to train on multiple views of low-light scene, we can thus render out the well-lit scene in an 
-				<strong>unsupervised</strong> manner. We introduce a surrogate concept, Concealing Fields, that reduce the transport of light during the volume rendering stage. 
-				Specifically, our proposed method, <strong>Aleth-NeRF</strong>, directly learns from the dark image to understand volumetric object representation and concealing 
-				field under priors. By simply eliminating Concealing Fields, we can render a single or multi-view well-lit image(s)  and gain superior performance 
-				over other 2D low light enhancement  methods. Additionally, we collect the first paired <strong>LO</strong>w-light and normal-light <strong>M</strong>ulti-view (LOM) datasets for
-				future research.
+				The standard Neural Radiance Fields (NeRF) paradigm employs a viewer-centered methodology, entangling the aspects of illumination and material 
+				reflectance into emission solely from 3D points. This simplified rendering approach presents challenges in accurately modeling images captured 
+				under adverse lighting conditions, such as low light or over-exposure. Motivated by the ancient Greek emission theory that posits visual perception 
+				as a result of rays emanating from the eyes, we slightly refine the conventional NeRF framework to train NeRF under challenging light conditions and 
+				generate normal-light condition novel views unsupervised. We introduce the concept of a ”Concealing Field,” which assigns transmittance values to the 
+				surrounding air to account for illumination effects. In dark scenarios, we assume that object emissions maintain a standard lighting level but are 
+				attenuated as they traverse the air during the rendering process. Concealing Field thus compel NeRF to learn reasonable density and colour estimations for 
+				objects even in dimly lit situations. Similarly, the Concealing Field can mitigate over-exposed emissions during the rendering stage. 
+				Furthermore, we present a comprehensive multi-view dataset captured under challenging illumination conditions for evaluation. 
 			</td>
 		</tr>
 	</table>
@@ -452,9 +462,9 @@
 	<table align=center width=950px>
 		<tr>
 			<td>
-			We collect the first paired multi-view low-light and normal-light dataset, <strong>LOM</strong> dataset. Including 5 scenes: <i>buu</i>, <i>chair</i>, 
-				<i>sofa</i>, <i>bike</i> and <i>shrub</i>.  Download the <strong>LOM</strong> dataset from: <a href="https://drive.google.com/file/d/1YBSHMSFmHxAHHS9qo_qdthchhl8IlKCP/view?usp=share_link">[google drive]</a> or 
-				<a href="https://pan.baidu.com/s/1Y76ya8YniIe4GpjGVBzlOg">[baiduyun (passwd: qeb7)]</a>. 
+			We collect the first paired Low-light & Over-exposure & normal-light Multi-view dataset, <strong>LOM</strong> dataset. Including 5 scenes: <i>buu</i>, <i>chair</i>, 
+				<i>sofa</i>, <i>bike</i> and <i>shrub</i>.  Download the <strong>LOM</strong> dataset from: <a href="https://drive.google.com/file/d/1Fhe4UZ4aIgiMHiVzizvvqWukLkefygmL/view">[google drive]</a> or 
+				<a href="https://pan.baidu.com/s/1Jx6wqbLvBVSHJRLNQYARlA">[baiduyun (passwd: cbhr)]</a>. 
 			</td>
 		</tr>
 	</table>
