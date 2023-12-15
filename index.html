@@ -401,7 +401,7 @@
 		<tr>
 			<td align=center width=800px>
 				<center>
-					<td><img class="round" style="width:800px" src="resources/Methods.png"/></td>
+					<td><img class="round" style="width:800px" src="resources/structure.png"/></td>
 				</center>
 			</td>
 		</tr>
@@ -410,15 +410,8 @@
 	<table align=center width=950px>
 		<tr>
 			<td>
-			To explore the NeRF application in the commonly captured but often precluded low-light scenes, we aim to propose a framework that directly supervises on low-light
-			sRGB images. The rendering process in NeRF is similar to the emission theory held by ancient Greek. Emission theory ignores the incident light but postulates visual rays emitted
-			from the eye travel in straight lines and interacts with objects to form the visual perception. Therefore, the darkness of an entity is solely caused by the particles between the object
-			and the eye. In other words, all objects are visible by default unless they are concealed.
-			<br />
-			<br />
-			Inspired by this worldview, we assume a simple but NeRF-friendly model that it is the concealing fields in viewing direction makes the viewer see a low-light scene.
-			We design two types of conceiling fields (global conceiling field and local conceiling field) between the viewer and scene. In the training stage, the volumn rendering function would mimic
-			by the proposed conceling fields. In the evaluation stage, the conceiling fields would be taken off to render out a normal-lit scene.
+			Train on adverse lighting condition images C<sup>adv</sup>sup>, Aleth-NeRF performs unsupervised lightness correction by 
+			(a). remove concealing fields in low-light conditions and (b). add concealing fields in over-exposure conditions.
 			</td>
 		</tr>
 	</table>
@@ -428,7 +421,7 @@
 		<tr>
 			<td align=center width=500px>
 				<center>
-					<td><img class="round" style="width:500px" src="resources/constrain.png"/></td>
+					<td><img class="round" style="width:500px" src="resources/Corr.png"/></td>
 				</center>
 			</td>
 		</tr>
@@ -437,8 +430,8 @@
 	<table align=center width=950px>
 		<tr>
 			<td>
-			The additional priors have been added on the concealing fields and the predicted normal light scene, facilitate to the unsupervised low light scene enhancement. Including the color constancy prior, 
-			struture prior and value range prior. Please refer to paper for details.
+			Along camera ray r (z axis), concealing fields and density σ exhibit a negative correlation, This validates that concealing fields are separated from density, thus rarely participating in scene rendering. 
+			Concealing fields exists more in locations r(i) with sparse density, i.e. air outside the objects..
 			</td>
 		</tr>
 	</table>
