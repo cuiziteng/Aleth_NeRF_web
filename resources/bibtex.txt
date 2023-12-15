@@ -1,6 +1,6 @@
-@inproceedings{author20XXtitle,
-  title={Please cite me},
-  author={Author, First and Author, Second and Author, Third},
-  booktitle={Conference},
-  year={20XX}
+@inproceedings{cui_aleth_nerf,
+  title={Aleth-NeRF: Illumination Adaptive NeRF with Concealing Field Assumption},
+  author={Cui, Ziteng and Gu, Lin and Sun, Xiao and Ma, Xianzheng and Qiao, Yu and Harada, Tatsuya},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  year={2024}
 }
